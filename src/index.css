@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@font-face{
+  src: url("/src/assets/font/GoogleSans-VariableFont_GRAD\,opsz\,wght.ttf");
+  font-family: "Google Sans";
+}
+
+:root{
+  --primary-color: black;
+  --secondary-color: rgb(25, 165, 241);
+  --tertiary-color: rgb(140, 0, 255);
+  --font-color: white;
+}
+
+body{
+  background-color: black;
+  font-family: "Google Sans";
+}
