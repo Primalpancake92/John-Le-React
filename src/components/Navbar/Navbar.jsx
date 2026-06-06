@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom"
 
-function Avatar ({ profile }) {
+function Avatar({ profile }) {
     return (
         <NavLink to="/" className="text-[rgb(255,255,255)] text-[1.3rem] flex
         items-center gap-5">
-            <div className="relative w-[70px] h-[70px] rounded-full shrink-0">
+            <div className="relative w-[64px] h-[64px] rounded-full shrink-0">
                 <img src="../src/assets/images/1741594104211.jpg"
-                className="w-[70px] h-[70px] rounded-full object-fit"></img>
+                className="w-[64px] h-[64px] rounded-full object-fit"></img>
             </div>
             <div className="relative flex flex-col text-sm">
                 <p className="text-2xl">{profile.name}</p>
@@ -16,7 +16,7 @@ function Avatar ({ profile }) {
     )
 }
 
-function ContactNav ({ path }) {
+function ContactNav({ path }) {
     return (
         <div className="px-[14px] border-[var(--secondary-color)]
         bg-[rgba(0,166,255,0.52)] text-[white] h-[46px] flex items-center
@@ -31,7 +31,7 @@ function ContactNav ({ path }) {
     );
 }
 
-function NavCentre ({ links }) {
+function NavCentre({ links }) {
     if (!Array.isArray(links)) {
         console.log("The prop is not an array");
         return null;
@@ -39,8 +39,8 @@ function NavCentre ({ links }) {
 
     return (
         <div className="rounded-full flex justify-center items-center gap-x-2
-        border-1 bg-[rgba(15,15,15)] h-[64px] px-[9px] hover:border-1 hover:border-[grey]
-        transition-all duration-300 ease-in-out antialiased backdrop-blur-md">
+        border-1 bg-[rgba(15,15,15)] h-[64px] px-[8px] hover:border-1 hover:border-[grey]
+        transition-all duration-300 ease-out antialiased backdrop-blur-md">
             {links.map((link) => (
                 <NavLink key={link.id} to={link.path}
                 className={({ isActive }) => 
@@ -69,13 +69,13 @@ function Navbar() {
 
     const profile = {
         name: "John Le",
-        basic_info: "UTS | Third year Computer Science",
+        basic_info: "UTS",
         specialisation: "Front end web development"
     }
 
     return (
-        <nav className="h-[125px] w-full bg-[rgba(0,0,0,0.6)] flex
-        px-10 items-center justify-center">
+        <nav className="relative h-[125px] w-full bg-[rgba(0,0,0,0.6)] flex
+        px-15 items-center justify-center">
             <div className="w-full grid grid-cols-3 items-center">
                 <div className="justify-self-start">
                     <Avatar profile={profile}/>
