@@ -8,28 +8,30 @@ function NavigationPanel({ iterations, appName }) {
             {Array.from({length: iterations}, (_, index) => 
                 (index == 2) ? (
                     <div key={index} className="h-[20px] w-[20px] 
-                    bg-[rgb(238,65,65)] rounded-full"></div>
+                    bg-[rgb(238,65,65)] rounded-full shrink-0"></div>
                 ) : (
                     <div key={index} className="h-[20px] w-[20px] 
-                    bg-[rgb(180,180,180)] rounded-full"></div>
+                    bg-[rgb(180,180,180)] rounded-full shrink-0"></div>
                 )
             )}
         </div>
-    )
+    );
 }
 
 function TerminalText() {
-
+    return (
+        <h1>$</h1>
+    );
 }
 
 function Bash() {
     return (
-        <div className="relative mt-30 border-1 h-[550px] w-[1000px] border-[rgb(45,45,45,0.5)] 
+        <div className="relative mt-35 border-1 h-[550px] w-[1000px] border-[rgb(45,45,45,0.5)] 
         rounded-xl flex flex-col bg-[rgb(15,15,15)]
         shadow-[0px_0px_125px_1px_rgba(25,165,241,0.8)]">
             <NavigationPanel iterations={3} appName={"john_le.sh"} />
         </div>
-    )
+    );
 }
 
 function Hero() {
@@ -37,7 +39,7 @@ function Hero() {
         <div className="h-max max-h-screen w-full flex justify-center items-center flex-col">
             <Bash />
         </div>
-    )
+    );
 }
 
 export default Hero;
