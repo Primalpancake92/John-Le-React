@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom"
 
 function Avatar({ profile }) {
     return (
-        <NavLink to="/" className="text-[rgb(255,255,255)] text-[1.3rem] flex
+        <NavLink to="/" className="text-[rgb(255,255,255)] text-[1.2rem] flex
         items-center gap-5">
-            <div className="relative w-[64px] h-[64px] rounded-full shrink-0">
+            <div className="relative w-[51px] h-[51px] rounded-full shrink-0">
                 <img src="../src/assets/images/1741594104211.jpg"
-                className="w-[64px] h-[64px] rounded-full object-fit"></img>
+                className="w-[51px] h-[51px] rounded-full object-fit"></img>
             </div>
             <div className="relative flex flex-col text-sm">
                 <p className="text-2xl">{profile.name}</p>
@@ -19,12 +19,12 @@ function Avatar({ profile }) {
 function ContactNav({ path }) {
     return (
         <div className="px-[14px] border-[var(--secondary-color)]
-        bg-[rgba(0,166,255,0.52)] text-[white] h-[46px] flex items-center
+        bg-[var(--secondary-color)] text-[white] h-[41px] flex items-center
         justify-center backdrop-blur-lg rounded-full transition-all duration-300
         ease-in-out 
-        hover:shadow-[inset_-1px_1px_3px_rgba(200,200,255,0.5),0_0px_15px_5px_rgba(25,165,241,0.5)]">
+        hover:shadow-[inset_-1px_1px_3px_rgba(200,200,255,0.5),0_0px_15px_5px_rgba(80,169,252,0.5)]">
             <NavLink to={path} className="
-            text-[1.3rem] text-[var(--font-color)]">
+            text-[1.2rem] text-[var(--font-color)]">
                 Contact Me
             </NavLink>
         </div>
@@ -38,14 +38,13 @@ function NavCentre({ links }) {
     }
 
     return (
-        <div className="rounded-full flex justify-center items-center gap-x-2
-        border-1 bg-[rgba(15,15,15)] h-[64px] px-[8px] hover:border-1 hover:border-[grey]
-        transition-all duration-300 ease-out antialiased backdrop-blur-md">
+        <div className="z-[5555555] rounded-full flex justify-center items-center gap-x-2
+        border-2 border-[rgb(45,45,45)] bg-[#0E0F0E] h-[54px] px-[8px] antialiased">
             {links.map((link) => (
                 <NavLink key={link.id} to={link.path}
                 className={({ isActive }) => 
-                `relative transition-all duration-500 ease-in-out px-4 py-2
-                flex text-[1.3rem]
+                `relative transition-all duration-500 ease-in-out px-3 py-[5px]
+                flex text-[1.1rem]
                 ${isActive ?
                 "text-white bg-[rgba(255,255,255,0.1)] backdrop-blur-m rounded-full\
                 shadow-[inset_-1px_1px_2px_rgba(255,255,255,0.5)]" :
@@ -74,7 +73,7 @@ function Navbar() {
     }
 
     return (
-        <nav className="relative h-[125px] w-full bg-[rgba(0,0,0,0.6)] flex
+        <nav className="z-[500] relative h-[100px] w-full flex flex-row
         px-15 items-center justify-center">
             <div className="w-full grid grid-cols-3 items-center">
                 <div className="justify-self-start">

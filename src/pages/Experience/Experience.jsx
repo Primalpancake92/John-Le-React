@@ -1,5 +1,5 @@
 export default function Experience () {
     return (
-        <h1>This is the experience page</h1>
+        <h1 className="text-white">This is the experience page</h1>
     )
 }

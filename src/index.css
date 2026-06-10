@@ -6,13 +6,13 @@
 }
 
 :root{
-  --primary-color: black;
-  --secondary-color: rgb(25, 165, 241);
-  --tertiary-color: rgb(140, 0, 255);
+  --primary-color: rgb(17, 17, 17);
+  --secondary-color: rgb(80, 169, 252);
+  --tertiary-color: rgba(137, 46, 211, 0.773);
   --font-color: white;
 }
 
 body{
-  background-color: black;
+  background-color: var(--primary-color);
   font-family: "Google Sans";
 }
