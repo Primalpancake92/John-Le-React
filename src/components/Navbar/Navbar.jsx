@@ -18,7 +18,7 @@ function Avatar({ profile }) {
 
 function ContactNav({ path }) {
     return (
-        <div className="px-[14px] border-[var(--secondary-color)]
+        <div className="px-[13px] border-[var(--secondary-color)]
         bg-[var(--secondary-color)] text-[white] h-[41px] flex items-center
         justify-center backdrop-blur-lg rounded-full transition-all duration-300
         ease-in-out 
@@ -42,7 +42,7 @@ function NavCentre({ links }) {
         border-2 border-[rgb(45,45,45)] bg-[#0E0F0E] h-[54px] px-[8px] antialiased">
             {links.map((link) => (
                 <NavLink key={link.id} to={link.path}
-                className={({ isActive }) => 
+                className={({ isActive }) =>
                 `relative transition-all duration-500 ease-in-out px-3 py-[5px]
                 flex text-[1.1rem]
                 ${isActive ?
@@ -60,7 +60,6 @@ function NavCentre({ links }) {
 
 function Navbar() {
     const navLinks = [
-        {id: "home", path: "/John/Home", linkName: "Home"},
         {id: "about", path: "/John/About", linkName: "About"},
         {id: "experience", path: "/John/Experience", linkName: "Experience"},
         {id: "projects", path: "/John/Projects", linkName: "Projects"}
@@ -74,7 +73,7 @@ function Navbar() {
 
     return (
         <nav className="z-[500] relative h-[100px] w-full flex flex-row
-        px-15 items-center justify-center">
+        px-90 items-center justify-center w-full">
             <div className="w-full grid grid-cols-3 items-center">
                 <div className="justify-self-start">
                     <Avatar profile={profile}/>

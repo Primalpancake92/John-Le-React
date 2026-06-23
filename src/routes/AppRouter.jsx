@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom"
 import Hero from "../pages/Hero/Hero.jsx"
-import Home from "../pages/Home/Home.jsx"
 import About from "../pages/About/About.jsx"
 import Experience from "../pages/Experience/Experience.jsx"
 import Projects from "../pages/Projects/Projects.jsx"
@@ -10,7 +9,6 @@ export default function AppRouter() {
     return (
         <Routes >
             <Route path="/" element={<Hero />} />
-            <Route path="/John/Home" element={<Home />} />
             <Route path="/John/About" element={<About />} />
             <Route path="/John/Experience" element={<Experience />} />
             <Route path="/John/Projects" element={<Projects />} />
