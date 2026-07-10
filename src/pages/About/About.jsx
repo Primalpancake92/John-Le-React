@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import resume from "../../assets/Resume/John_Le_CV_2026.pdf"
 import pfp from "../../assets/images/IMG_2247.jpeg"
 import Skillsgrid from "../../components/Skillsbar/Skillsbar.jsx"
+import SubSection from "../../components/SubSection/SubSection.jsx"
 
 function AboutSection({ children }) {
     return (
@@ -19,7 +20,8 @@ function AboutImage({ src }) {
         <div className="relative h-[500px] flex flex-col items-center justify-center">
             <div className="rounded-[30px] shrink-0">
                 <img src={src}
-                className="object-cover rounded-[30px] w-[100%] h-[500px]"></img>
+                className="object-cover rounded-[30px] w-[100%] h-[500px]
+                scale-x-[-1]"></img>
             </div>
         </div>
     );
@@ -114,15 +116,13 @@ function AboutText() {
 
 export default function About() {
     return (
-        <div className="relative flex flex-col justify-cetner items-center w-full h-full">
+        <div className="relative flex flex-col justify-center items-center w-full h-full">
             <AboutSection>
                 <AboutImage src={pfp} />
                 <AboutText />
                 <AboutDots />
             </AboutSection>
-            <div>
-                <Skillsgrid />
-            </div>
+            <Skillsgrid />
         </div>
     );
 }

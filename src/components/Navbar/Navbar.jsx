@@ -44,7 +44,7 @@ function NavCentre({ links }) {
                 <NavLink key={link.id} to={link.path}
                 className={({ isActive }) =>
                 `relative transition-all duration-500 ease-in-out px-3 py-[5px]
-                flex text-[1.1rem]
+                flex text-[1.1rem] px-3
                 ${isActive ?
                 "text-white bg-[rgba(255,255,255,0.1)] backdrop-blur-m rounded-full\
                 shadow-[inset_-1px_1px_2px_rgba(255,255,255,0.5)]" :

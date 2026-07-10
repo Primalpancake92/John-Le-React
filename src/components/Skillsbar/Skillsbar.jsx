@@ -1,3 +1,5 @@
+import SubSection from "../SubSection/SubSection.jsx";
+
 function Skillsgrid() {
     const skills = [
         {id: 1, name: "React.Js", icon: ""},
@@ -13,10 +15,10 @@ function Skillsgrid() {
     ];
 
     return (
-        <div className="grid grid-cols-5 gap-4 rounded-lg p-4 bg-">
+        <div className="grid grid-cols-5 gap-4 rounded-lg p-4">
             {skills.map((skill) =>
                 <div key={skill.id} className="border border-gray-500 flex flex-col
-                rounded-full shrink-0 w-[150px]
+                rounded-full shrink-0 w-[150px] text-white
                 items-center justify-center p-2">
                     <img src={skill.icon}></img>
                     <p>{skill.name}</p>
@@ -28,8 +30,8 @@ function Skillsgrid() {
 
 export default function Skillsbar() {
     return (
-        <>
+        <SubSection name={"Skills"}>
             <Skillsgrid />
-        </>
+        </SubSection>
     );
 }
