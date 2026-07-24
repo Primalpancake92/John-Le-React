@@ -16,7 +16,6 @@ const skills = [
     ];
 
 function SkillIcon() {
-
     return (
         <div className="grid grid-cols-5 gap-12 rounded-lg">
             {skills.map((skill) => {

@@ -1,49 +1,44 @@
-const experience = [
-    {
-        id: 1, 
-        workplace: "Westmead Hospital", 
-        position: "Data Entry Assistant",
-        skills: [
-            {id: 1, info: "Collaborated with internal and external stakeholders"},
-            {id: 2, info: ""},
-            {id: 3, info: ""}
-        ]
-    },
-    {
-        id: 2, workplace: "UTS", position: "Casual Academic",
-        skills: []
-    },
-    {
-        id: 3, workplace: "Westpac", position: "Work Placement",
-        skills: []
-    }
-];
+import experience from "../../local_data/workExperience";
 
-function Experiences() {
+function ExperienceTile() {
     return (
-        <div className="relative w-full h-full border border-white">
-            {experience.map((experience) => (
-                <div key={experience.id}>
-                    <h1>{experience.position}</h1>
-                    <h2>{experience.workplace}</h2>
-                    <ul>
-                        {experience.skills.map((skill) => (
-                            <li key={skill.id}>
-                                {skill.info}
+        <>
+            {experience.toReversed().map((experience) => (
+                <div key={experience.id}
+                className={`text-[rgba(195,195,195,0.49)] rounded-2xl 
+                border-grey border p-5 m-5 hover:-translate-y-1 
+                hover:shadow-[0_0_15px_5px_var(--secondary-color)]
+                hover:text-[rgb(237,237,237)]
+                cursor-pointer transition-all ease-in-out duration-300`}>
+                    <h1 className="text-3xl font-semibold">{experience.position}</h1>
+                    <h2 className="text-xl italic">{experience.workplace}</h2>
+                    <ul className="relative mb-3 mt-3 list-disc list-outside">
+                        {experience.skills.map((skill, index) => (
+                            <li className="text-md ml-8" key={index}>
+                                {skill}
                             </li>
                         ))}
                     </ul>
                 </div>
             ))}
+            <hr className="h-1"></hr>
+        </>
+    );
+}
+
+function Experiences() {
+    return (
+        <div className="grid grid-rows-3 grid-cols-1 w-175">
+            <ExperienceTile />
         </div>
     );
 }
 
-export default function Experience () {
+export default function ExperienceTimeline() {
     return (
         <div>
+            
             <Experiences />
-            <h1 className="text-white">This is the experience page</h1>
         </div>
     )
 }
