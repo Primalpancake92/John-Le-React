@@ -73,7 +73,7 @@ function Navbar() {
 
     return (
         <nav className="z-[500] relative h-[100px] w-full flex flex-row
-        px-90 items-center justify-center w-full">
+        px-35 items-center justify-center w-full">
             <div className="w-full grid grid-cols-3 items-center">
                 <div className="justify-self-start">
                     <Avatar profile={profile}/>

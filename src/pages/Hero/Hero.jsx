@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 function NavigationPanel({ appName }) {
     return (
         <div className="relative w-full h-[50px] rounded-t-[11px] flex 
@@ -27,17 +29,33 @@ function TerminalText() {
 function Bash() {
     return (
         <div className="relative mb-15 border-1 h-[600px] w-[1000px] border-[rgb(45,45,45,0.5)] 
-        rounded-xl flex flex-col bg-[rgb(15,15,15)]
-        shadow-[0px_0px_75px_1px_rgba(25,165,241,0.8)]">
+        rounded-xl flex flex-col bg-[rgb(15,15,15)] shadow-[0_0_20px_10px_rgba(25,175,255,0.5)]">
             <NavigationPanel appName={"john_le.sh"} />
         </div>
     );
 }
 
 function Hero() {
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+
     return (
         <div className="h-[calc(100vh-100px)] w-full flex justify-center 
-        items-center">
+        items-center"
+        
+        onPointerMove={(e) => {
+            setPosition({
+                x: e.clientX,
+                y: e.clientY
+            })
+        }}
+        >
+            <div className="absolute bg-[var(--fourth-color)] rounded-full
+            top-0 left-0 z-20 shadow-[0px_0px_50px_25px_rgba(35,170,255,1)]"
+            style={{
+                transform: `translate(${position.x}px, ${position.y}px)`,
+                transition: 'transform 0.05s linear'
+            }}>
+            </div>
             <Bash />
         </div>
     );
