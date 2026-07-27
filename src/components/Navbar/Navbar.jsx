@@ -5,8 +5,8 @@ function Avatar({ profile }) {
         <NavLink to="/" className="text-[rgb(255,255,255)] text-[1.2rem] flex
         items-center gap-5">
             <div className="relative w-[51px] h-[51px] rounded-full shrink-0">
-                <img src="../src/assets/images/1741594104211.jpg"
-                className="w-[51px] h-[51px] rounded-full object-fit"></img>
+                <img src="../src/assets/images/hq720.jpg"
+                className="w-[51px] h-[51px] rounded-full object-cover"></img>
             </div>
             <div className="relative flex flex-col text-sm">
                 <p className="text-2xl">{profile.name}</p>
@@ -24,7 +24,7 @@ function ContactNav({ path }) {
         ease-in-out 
         hover:shadow-[inset_-1px_1px_3px_rgba(200,200,255,0.5),0_0px_15px_5px_rgba(80,169,252,0.5)]">
             <NavLink to={path} className="
-            text-[1.2rem] text-[var(--font-color)]">
+            text-[1.2rem] text-(--font-color)]">
                 Contact Me
             </NavLink>
         </div>

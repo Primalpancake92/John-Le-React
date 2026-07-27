@@ -29,8 +29,7 @@ const experience = [
             Snyk to identify security vulnerabilities and communicate 
             remediation strategies to development teams.`,
             `Provided meaningful suggestions for PySpark queries to improve code
-             readability and re-usability.`,
-            ``
+             readability and re-usability.`
         ]
     }
 ];
