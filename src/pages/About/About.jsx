@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom"
 import resume from "../../assets/Resume/John_Le_CV_2026.pdf"
 import pfp from "../../assets/images/IMG_2247.jpeg"
-import Skillsgrid from "../../components/Skillsbar/Skillsbar.jsx"
+import Skillsbar from "../../components/Skillsbar/Skillsbar.jsx"
 import SubSection from "../../components/SubSection/SubSection.jsx"
 
 function AboutSection({ children }) {
     return (
-        <section className="min-h-[calc(100vh-100px)] flex flex-row items-center justify-center
-            h-[calc(100vh-100px)] w-[1500px]">
-            <div className="flex flex-row mb-20 items-center justify-center gap-[5rem]">
+        <section className="flex flex-row items-center justify-center
+            h-[calc(100vh-80px)] w-[970px]">
+            <div className="flex flex-row mb-20 items-center justify-center 
+            gap-25">
                 {children}
             </div>
         </section>
@@ -116,13 +117,14 @@ function AboutText() {
 
 export default function About() {
     return (
-        <div className="relative flex flex-col justify-center items-center w-full h-full">
+        <div className="relative flex flex-col justify-center items-center 
+        h-full">
             <AboutSection>
                 <AboutImage src={pfp} />
                 <AboutText />
                 <AboutDots />
             </AboutSection>
-            <Skillsgrid />
+            <Skillsbar />
         </div>
     );
 }

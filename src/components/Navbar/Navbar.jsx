@@ -9,8 +9,9 @@ function Avatar({ profile }) {
                 className="w-[51px] h-[51px] rounded-full object-cover"></img>
             </div>
             <div className="relative flex flex-col text-sm">
-                <p className="text-2xl">{profile.name}</p>
-                <p className="text-md">{profile.basic_info} | {profile.specialisation}</p>
+                <p className="text-2xl text-(--secondary-color)">
+                    {`< ${profile.name} />`}
+                </p>
             </div>
         </NavLink>
     )
@@ -66,14 +67,13 @@ function Navbar() {
     ];
 
     const profile = {
-        name: "John Le",
-        basic_info: "UTS",
-        specialisation: "Front end web development"
+        name: "John Le"
     }
 
     return (
-        <nav className="z-[500] relative h-[100px] w-full flex flex-row
-        px-35 items-center justify-center w-full">
+        <nav className="top-0 z-[500] sticky h-[80px] w-full flex flex-row
+        px-35 items-center justify-center 
+        shadow-[0px_0px_5px_5px-rgb(0,0,0)]">
             <div className="w-full grid grid-cols-3 items-center">
                 <div className="justify-self-start">
                     <Avatar profile={profile}/>
