@@ -4,7 +4,7 @@ export default function SkillType({ skillName }) {
     const skillList = skills[skillName] || [];
 
     return (
-        <div className="relative grid grid-cols-3
+        <div className="relative grid grid-cols-3 
         gap-5 transition-color duration-300 place-items-center
         ease-in-out">
             {skillList.map(({name, Icon}) => (

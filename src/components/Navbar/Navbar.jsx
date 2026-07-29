@@ -49,7 +49,7 @@ function NavCentre({ links }) {
                 ${isActive ?
                 "text-white bg-[rgba(255,255,255,0.1)] backdrop-blur-m rounded-full\
                 shadow-[inset_-1px_1px_2px_rgba(255,255,255,0.5)]" :
-                "text-[var(--font-color)] hover:text-[white] hover:cursor-pointer\
+                "text-(--font-color) hover:text-[white] hover:cursor-pointer\
                 hover:bg-[rgba(255,255,255,0.1)] backdrop-blur-sm rounded-full\
                 hover:shadow-[inset_-1px_1px_2px_rgba(255,255,255,0.5)]"}`}>
                     {link.linkName}
@@ -71,9 +71,8 @@ function Navbar() {
     }
 
     return (
-        <nav className="top-0 z-[500] sticky h-[80px] w-full flex flex-row
-        px-35 items-center justify-center 
-        shadow-[0px_0px_5px_5px-rgb(0,0,0)]">
+        <nav className="top-0 z-25 sticky h-20 w-full flex flex-row
+        px-35 items-center justify-center">
             <div className="w-full grid grid-cols-3 items-center">
                 <div className="justify-self-start">
                     <Avatar profile={profile}/>
