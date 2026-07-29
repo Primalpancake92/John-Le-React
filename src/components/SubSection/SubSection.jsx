@@ -2,13 +2,16 @@ import Heading from "../Heading/Heading.jsx";
 
 function SubSection({ name, children }) {
     return (
-        <section className="flex flex-col gap-6">
-            {/*Remember to put your heading component here
-            and add relevant tailwindcss properties*/}
-            <div className="grid grid-cols-2 gap-10">
-                {children}
+        <div className="relative flex flex-col justify-center items-center
+        w-full h-screen">
+            <div className="relative flex flex-col items-center justify-center
+            w-full">
+                <Heading headingName={name}/>
+                <div className="relative grid grid-cols-2 gap-15">
+                    {children}
+                </div>
             </div>
-        </section>
+        </div>
     );
 }
 

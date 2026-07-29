@@ -7,7 +7,7 @@ import SubSection from "../../components/SubSection/SubSection.jsx"
 function AboutSection({ children }) {
     return (
         <section className="flex flex-row items-center justify-center
-            h-[calc(100vh-80px)] w-[970px]">
+        h-[calc(100vh-80px)]">
             <div className="flex flex-row mb-20 items-center justify-center 
             gap-25">
                 {children}
@@ -117,14 +117,18 @@ function AboutText() {
 
 export default function About() {
     return (
-        <div className="relative flex flex-col justify-center items-center 
-        h-full">
+        <div className="relative flex flex-col justify-center items-center">
             <AboutSection>
-                <AboutImage src={pfp} />
-                <AboutText />
-                <AboutDots />
+                    <AboutImage src={pfp} />
+                    <AboutText />
+                    <AboutDots />
             </AboutSection>
-            <Skillsbar />
+            <div className="relative">
+                <Skillsbar />
+            </div>
+            <div className="relative">
+                <SubSection name={"< Recent Projects />"}/>
+            </div>
         </div>
     );
 }
