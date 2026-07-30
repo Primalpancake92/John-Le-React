@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import navLinks from "../../local_data/navLinks";
 
 function Avatar({ profile }) {
     return (
@@ -60,12 +61,6 @@ function NavCentre({ links }) {
 }
 
 function Navbar() {
-    const navLinks = [
-        {id: "about", path: "/John/About", linkName: "About"},
-        {id: "experience", path: "/John/Experience", linkName: "Experience"},
-        {id: "projects", path: "/John/Projects", linkName: "Projects"}
-    ];
-
     const profile = {
         name: "John Le"
     }
