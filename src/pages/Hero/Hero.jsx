@@ -28,8 +28,8 @@ function TerminalText() {
 
 function Bash() {
     return (
-        <div className="relative mb-15 border-1 h-[600px] w-[1000px] border-[rgb(45,45,45,0.5)] 
-        rounded-xl flex flex-col bg-[rgb(15,15,15)] shadow-[0_0_20px_10px_rgba(25,175,255,0.5)]">
+        <div className="relative mb-15 border h-150 w-250 border-[rgb(45,45,45,0.5)] 
+        rounded-xl flex flex-col bg-[rgb(15,15,15)]">
             <NavigationPanel appName={"john_le.sh"} />
         </div>
     );
@@ -49,8 +49,17 @@ function Hero() {
             })
         }}
         >
-            <div className="absolute bg-[var(--fourth-color)] rounded-full
-            top-0 left-0 z-20 shadow-[0px_0px_50px_25px_rgba(35,170,255,1)]"
+            <div
+                className="
+                    absolute inset-0
+                    bg-[linear-gradient(to_right,rgba(22,165,255,0.3)_1px,transparent_1px),linear-gradient(to_bottom,rgba(22,165,255,0.3)_1px,transparent_1px)]
+                    bg-[size:50px_50px]
+                    [mask-image:radial-gradient(circle,black_0%,transparent_60%)]
+                    [-webkit-mask-image:radial-gradient(circle,black_0%,transparent_70%)]
+                "
+            />
+            <div className="z-500 absolute bg-(--fourth-color) rounded-full
+            top-0 left-0 shadow-[0px_0px_50px_25px_rgba(35,170,255,1)]"
             style={{
                 transform: `translate(${position.x}px, ${position.y}px)`,
                 transition: 'transform 0.05s linear'

@@ -1,29 +1,29 @@
 import socials from "../../local_data/socials";
-import { Link } from "react-router-dom";
+import navLinks from "../../local_data/navLinks";
+import { Link } from "react-router";
 
 function Socials({ socialsArr }) {
     return (
-        <div className="relative flex-col justify-center">
-            {socialsArr.map(({ name, Icon, link }) => (
-                <div key={name}
-                className="relative flex items-center justify-center">
-                    <div className="relative text-white">
-                        <div className="relative flex justify-center 
-                        items-center">
-                            {Icon && <Icon size={10}/>}
-                        </div>
-                        <a href={link}>{name}</a>
-                    </div>
+        <div className="relative flex-col justify-center items-center">
+            {socialsArr?.map(({ name, Icon, link }) => (
+                <div key={name} className="relative flex justify-start border
+                border-white items-center gap-2">
+                    {Icon && <Icon size={20}/>}
+                    <a href={link}>{name}</a>
                 </div>
             ))}
         </div>
     );
 }
 
-function QuickLinks() {
+function QuickLinks({ links=navLinks }) {
     return (
         <div className="relative">
-            <p>This is a placeholder</p>
+            {links.map((link) => (
+                <div key={link.div}>
+                    <Link to={link.path}>{link.linkName}</Link>
+                </div>
+            ))}
         </div>
     );
 }
@@ -36,9 +36,10 @@ function Footer() {
     */}
 
     return (
-        <div className="relative w-full h-50 bg-[rgb(23,23,23)]">
-            <Socials socialsArr={socials}/>
+        <div className="relative flex w-full h-50 bg-[rgb(23,23,23)] p-7
+        gap-20 text-white">
             <QuickLinks />
+            <Socials socialsArr={socials}/>
         </div>
     );
 }

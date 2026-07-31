@@ -3,17 +3,17 @@ import * as FaIcons from "react-icons/fa";
 const socials = [
     {
         "name": "LinkedIn",
-        "icon": FaIcons.FaLinkedinIn,
+        "Icon": FaIcons.FaLinkedinIn,
         "link": "https://www.linkedin.com/in/john-le-superconsole/"
     },
     {
         "name": "GitHub",
-        "icon": FaIcons.FaGithub,
+        "Icon": FaIcons.FaGithub,
         "link": "https://www.github.com/Primalpancake92"
     },
     {
         "name": "Youtube",
-        "icon": FaIcons.FaYoutube,
+        "Icon": FaIcons.FaYoutube,
         "link": "https://www.youtube.com/@The_Superconsole"
     }
 ];

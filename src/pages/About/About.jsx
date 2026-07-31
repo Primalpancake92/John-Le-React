@@ -127,13 +127,15 @@ export default function About() {
                     <AboutText />
                     <AboutDots />
             </AboutSection>
-            <div className="relative">
+            <div className="relative w-full">
                 <Skillsbar />
             </div>
-            <div className="relative">
+            <div className="relative w-full h-max-screen">
                 <SubSection name={"< Recent Projects />"}/>
             </div>
-            <Footer />
+            <div className="relative w-full">
+                <Footer />
+            </div>
         </div>
     );
 }

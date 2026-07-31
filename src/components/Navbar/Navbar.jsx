@@ -40,7 +40,7 @@ function NavCentre({ links }) {
     }
 
     return (
-        <div className="z-[5555555] rounded-full flex justify-center items-center gap-x-2
+        <div className="z-25 rounded-full flex justify-center items-center gap-x-2
         border-2 border-[rgb(45,45,45)] bg-[#0E0F0E] h-[54px] px-[8px] antialiased">
             {links.map((link) => (
                 <NavLink key={link.id} to={link.path}
