@@ -1,21 +1,11 @@
-import { useState } from 'react'
+import WindowBtns from "../../components/Terminal/WindowBtns/WindowBtns";
+import { useState } from "react";
 
 function NavigationPanel({ appName }) {
     return (
         <div className="relative w-full h-[50px] rounded-t-[11px] flex 
-            justify-end items-center bg-[rgb(45,45,45,0.5)] px-5 gap-[8px]">
-            <div className="left-0 w-full text-[rgb(180,180,180)]">
-                {appName}
-            </div>
-            {Array.from({length: 3}, (_, index) => 
-                (index == 2) ? (
-                    <div key={index} className="h-[20px] w-[20px] 
-                    bg-[rgb(238,65,65)] rounded-full shrink-0"></div>
-                ) : (
-                    <div key={index} className="h-[20px] w-[20px] 
-                    bg-[rgb(180,180,180)] rounded-full shrink-0"></div>
-                )
-            )}
+            justify-end items-center bg-[rgb(45,45,45,0.5)] px-5 gap-2">
+            <WindowBtns />
         </div>
     );
 }
@@ -39,7 +29,7 @@ function Hero() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
     return (
-        <div className="h-[calc(100vh-100px)] w-full flex justify-center 
+        <div className="z-550 h-[calc(100vh-100px)] w-full flex justify-center 
         items-center"
         
         onPointerMove={(e) => {
