@@ -4,7 +4,8 @@ import { useState } from "react";
 function NavigationPanel({ appName }) {
     return (
         <div className="relative w-full h-[50px] rounded-t-[11px] flex 
-            justify-end items-center bg-[rgb(45,45,45,0.5)] px-5 gap-2">
+            justify-end items-center bg-[rgb(45,45,45,0.5)] px-5 gap-197.25">
+            <p className="text-white">{appName}</p>
             <WindowBtns />
         </div>
     );
@@ -29,7 +30,7 @@ function Hero() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
     return (
-        <div className="z-550 h-[calc(100vh-100px)] w-full flex justify-center 
+        <div className="h-[calc(100vh-100px)] w-full flex justify-center 
         items-center"
         
         onPointerMove={(e) => {
