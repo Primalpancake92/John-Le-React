@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom"
-import resume from "../../assets/Resume/John_Le_CV_2026.pdf"
-import pfp from "../../assets/images/IMG_2247.jpeg"
-import Skillsbar from "../../components/Skillsbar/Skillsbar.jsx"
-import SubSection from "../../components/SubSection/SubSection.jsx"
+import { NavLink } from "react-router-dom";
+import resume from "../../assets/Resume/John_Le_CV_2026.pdf";
+import pfp from "../../assets/images/IMG_2247.jpeg";
+import Skillsbar from "../../components/Skillsbar/Skillsbar.jsx";
+import SubSection from "../../components/SubSection/SubSection.jsx";
+import Footer from "../../components/Footer/Footer";
 
 function AboutSection({ children }) {
     return (
@@ -59,14 +60,17 @@ function AboutActions() {
 
 function AboutDots() {
     const dotInfo = [
-        {id: 1, className: `relative w-[0px] h-[0px] bg-[var(--tertiary-color)]
+        {
+            id: 1, className: `relative w-[0px] h-[0px] bg-[var(--tertiary-color)]
             top-[-15rem] left-[-30rem] rounded-full
             shadow-[0px_0px_105px_75px_var(--tertiary-color)] z-[-5]`
         },
-        {id: 2, className: `relative shadow-[0px_0px_75px_50px_var(--secondary-color)]
+        {
+            id: 2, className: `relative shadow-[0px_0px_75px_50px_var(--secondary-color)]
             w-[0px] h-[0px] top-[-5rem] left-[30rem] rounded-full z-[-5]`
         },
-        {id: 3, className: `relative w-[0px] h-[0px] top-[20rem]
+        {
+            id: 3, className: `relative w-[0px] h-[0px] top-[20rem]
             shadow-[0px_0px_75px_50px_var(--fourth-color)] left-[-5rem]
             rounded-full z-[-5]`
         }
@@ -129,6 +133,7 @@ export default function About() {
             <div className="relative">
                 <SubSection name={"< Recent Projects />"}/>
             </div>
+            <Footer />
         </div>
     );
 }

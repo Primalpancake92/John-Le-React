@@ -1,23 +1,29 @@
 import socials from "../../local_data/socials";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function Socials({ socialsArr }) {
     return (
         <div className="relative flex-col justify-center">
-            {socialsArr?.map((social, Icon) => (
-                <div className="relative flex items-center justify-center">
-                    {Icon && <Icon size={10}/>}
-                    <Link to={social.link}>{social.name}</Link>
+            {socialsArr.map(({ name, Icon, link }) => (
+                <div key={name}
+                className="relative flex items-center justify-center">
+                    <div className="relative text-white">
+                        <div className="relative flex justify-center 
+                        items-center">
+                            {Icon && <Icon size={10}/>}
+                        </div>
+                        <a href={link}>{name}</a>
+                    </div>
                 </div>
             ))}
         </div>
     );
 }
 
-function QuickLinks({ props }) {
+function QuickLinks() {
     return (
         <div className="relative">
-            
+            <p>This is a placeholder</p>
         </div>
     );
 }
@@ -30,8 +36,9 @@ function Footer() {
     */}
 
     return (
-        <div>
+        <div className="relative w-full h-50 bg-[rgb(23,23,23)]">
             <Socials socialsArr={socials}/>
+            <QuickLinks />
         </div>
     );
 }
