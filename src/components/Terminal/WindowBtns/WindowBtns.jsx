@@ -11,9 +11,8 @@ export default function WindowBtns({ windowBtnArr=windowBtns }) {
         <div className="relative flex gap-3">
             {windowBtnArr?.map(({ id, colour, Icon }) => (
                 <div key={id} className={`relative flex justify-center 
-                items-center w-6 h-6 rounded-full shrink-0 ${colour}
-                font-extrabold`}>
-                    {Icon && <Icon size={11} />}
+                items-center w-6 h-6 rounded-full shrink-0 ${colour}`}>
+                    {Icon && <Icon strokeWidth={3} size={11} />}
                 </div>
             ))}
         </div>
