@@ -10,7 +10,7 @@ function AboutSection({ children }) {
         <section className="flex flex-row items-center justify-center
         h-[calc(100vh-80px)]">
             <div className="flex flex-row mb-20 items-center justify-center 
-            gap-25">
+            gap-25 z-10">
                 {children}
             </div>
         </section>
@@ -63,21 +63,21 @@ function AboutDots() {
         {
             id: 1, className: `relative w-[0px] h-[0px] bg-[var(--tertiary-color)]
             top-[-15rem] left-[-30rem] rounded-full
-            shadow-[0px_0px_105px_75px_var(--tertiary-color)] z-[-5]`
+            shadow-[0px_0px_105px_75px_var(--tertiary-color)]`
         },
         {
             id: 2, className: `relative shadow-[0px_0px_75px_50px_var(--secondary-color)]
-            w-[0px] h-[0px] top-[-5rem] left-[30rem] rounded-full z-[-5]`
+            w-[0px] h-[0px] top-[-5rem] left-[30rem] rounded-full`
         },
         {
             id: 3, className: `relative w-[0px] h-[0px] top-[20rem]
             shadow-[0px_0px_75px_50px_var(--fourth-color)] left-[-5rem]
-            rounded-full z-[-5]`
+            rounded-full`
         }
     ]
 
     return (
-        <div className="absolute border border-white">
+        <div className="pointer-events-none absolute -z-10">
             {dotInfo.map((dot) =>
                 <div className={dot.className} key={dot.id}>
                 </div>
