@@ -77,7 +77,7 @@ function AboutDots() {
     ]
 
     return (
-        <div className="absolute">
+        <div className="absolute border border-white">
             {dotInfo.map((dot) =>
                 <div className={dot.className} key={dot.id}>
                 </div>
