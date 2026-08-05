@@ -1,12 +1,28 @@
 import WindowBtns from "../../components/Terminal/WindowBtns/WindowBtns";
+import * as FaIcons from "react-icons/fa";
 import { useState } from "react";
 
 function NavigationPanel({ appName }) {
     return (
         <div className="relative w-full h-[50px] rounded-t-[11px] flex 
             justify-end items-center bg-[rgb(45,45,45,0.5)] px-5 gap-197.25">
-            <p className="text-white">{appName}</p>
+            <div className="relative -mr-7.5 flex gap-2">
+                <div className="relative border-2 border-white justify-center
+                items-center flex py-0.5 px-1 rounded bg-white 
+                test-[rgb(45,45,45,0.5)]">
+                    <FaIcons.FaTerminal size={13}/>
+                </div>
+                <span className="text-(--font-color)">{appName}</span>
+            </div>
             <WindowBtns />
+        </div>
+    );
+}
+
+function StartBar() {
+    return (
+        <div className="w-full relative flex justify-center items-center">
+
         </div>
     );
 }

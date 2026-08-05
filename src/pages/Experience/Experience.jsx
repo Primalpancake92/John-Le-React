@@ -1,6 +1,7 @@
 import experience from "../../local_data/workExperience";
 import Profile from "../../components/Profile/Profile";
 import ExperienceTile from "../../components/ExperienceTile/ExperienceTile";
+import Footer from "../../components/Footer/Footer";
 
 function Experiences() {
     return (
@@ -12,9 +13,10 @@ function Experiences() {
 
 export default function ExperienceTimeline() {
     return (
-        <div className="relative flex flex-row justify-center gap-10">
+        <div className="relative flex flex-col justify-center">
             <Profile />
             <Experiences />
+            <Footer />
         </div>
     )
 }
